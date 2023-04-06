@@ -1,0 +1,37 @@
+1. How will you tackle the challenge above?
+
+
+To tackle the above challenge, First we can convert CSV input into a structured format such as a 2D array .
+Then, we can loop through the cells and check if it contains a formula or a value.
+If it is a formula then we can calculate it by using a formula parser and store the result.
+Finally, I would write the calculated values into a new CSV file.
+
+
+
+
+2. What type of errors you would you check for?
+
+
+There are some of the errors that i would check for:
+
+Wrong cell references as per CSV file : (Example:- A5 or D1 for the given case is invalid cell reference)
+
+Wrong syntax for the formula: "+B1"
+
+Circular references : When a formula refers to itself like A1 = B1 and B1 = A1, both referring to each other
+
+variables undefined : When a formula references a cell which is not defined yet
+
+
+3. How might a user break your code?
+
+
+A user break our code given following ways:
+
+By inputting invalid CSV format : not separating with commas properly 
+
+By using unsupported function or formulas
+
+By using incorrect cell references
+
+By proving invalid data types : non-numeric values in cells that are expected to contain numbers
